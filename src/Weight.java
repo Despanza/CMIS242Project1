@@ -10,7 +10,7 @@ public class Weight {
         this.ounces = 20;
     }
     public int lessThan(int weight){
-        
+
         return weight;
 
     }
