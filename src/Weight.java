@@ -1,23 +1,49 @@
+/* Project 1
+Sterling Despanza
+January 26 2020
+Checks if object is lessthan, addsto total, divides object, changes objects to ounces
+and normalises object
+ */
 public class Weight {
-    public int pounds;
-    public int ounces;
-    public Weight(int pounds, int ounces){
+    private double weight;
+    private double pounds;
+    private double ounces;
+    private double CONVERSION = 16;
+    public Weight(double pounds, double ounces){
         this.pounds = pounds;
         this.ounces = ounces;
     }
-    public Weight(){
-        this.pounds = 20;
-        this.ounces = 20;
-    }
-    public int lessThan(int weight){
 
-        return weight;
+   /* public Weight(String line) {
+        weight = Double.parseDouble(line);
+    }*/
+
+
+    public double lessThan(double weight){
+        if (weight > this.pounds){//Comparing weight
+            return (int) this.pounds;
+        }
+        else{
+            return weight;
+        }
 
     }
-    public int addTO(int weight){
+    public double addTO(double weight){
+       double hold = 0.0;
+       hold = hold + weight;
         return weight;
     }
-    public double divide(int weightD){
+    public double divide(double weightD){
         return weightD;
+    }
+    public String toString(){
+        return pounds + " lbs " + ounces + " oz ";
+    }
+    private double toOunces(){
+        this.ounces = this.pounds * 16;
+        return ounces;
+    }
+    private void normalise(){
+
     }
 }
