@@ -5,11 +5,11 @@ Checks if object is lessthan, addsto total, divides object, changes objects to o
 and normalises object
  */
 public class Weight {
-    private double weight;
-    private double pounds;
+    private Weight weight;
+    private int pounds;
     private double ounces;
     private double CONVERSION = 16;
-    public Weight(double pounds, double ounces){
+    public Weight(int pounds, double ounces){
         this.pounds = pounds;
         this.ounces = ounces;
     }
@@ -19,8 +19,8 @@ public class Weight {
     }*/
 
 
-    public double lessThan(double weight){
-        if (weight > this.pounds){//Comparing weight
+    public Weight lessThan(Weight weight[]){
+        if (weight[0] > weight[1]){//Comparing weight
             return (int) this.pounds;
         }
         else{
